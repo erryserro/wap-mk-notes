@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再访·竞彩网 — 持续关注的理由</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f2f4f7;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            color: #1e293b;
+            padding: 2rem 1.2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* hero 短句 */
+        .hero-tag {
+            background: #ffffff;
+            border: 1px solid #dce1e8;
+            border-radius: 24px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.02);
+            padding: 2rem 2rem 1.8rem;
+            margin-bottom: 2.2rem;
+            text-align: center;
+            transition: box-shadow 0.25s;
+        }
+
+        .hero-tag h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #0f172a;
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
+        }
+
+        .hero-tag .sub {
+            font-size: 1rem;
+            color: #4b5563;
+            border-top: 1px solid #e6edf4;
+            padding-top: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        /* 卡片通用 */
+        .card {
+            background: #ffffff;
+            border: 1px solid #dce1e8;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            padding: 1.8rem 2rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #0b1b33;
+            margin-bottom: 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid #eef2f7;
+            letter-spacing: 0.02em;
+        }
+
+        .card p {
+            margin-bottom: 0.9rem;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 特点列表 */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0.4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            padding: 0.6rem 0.8rem;
+            background: #f9fafc;
+            border-radius: 14px;
+            border-left: 4px solid #b3c7db;
+            transition: background 0.15s;
+        }
+
+        .feature-list li span.ico {
+            font-size: 1.25rem;
+            line-height: 1.4;
+            color: #2c5282;
+            min-width: 1.6rem;
+        }
+
+        .feature-list li strong {
+            font-weight: 500;
+            color: #1e293b;
+        }
+
+        /* 温和结尾区 */
+        .closing-note {
+            background: #ffffff;
+            border: 1px solid #dce1e8;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            padding: 1.6rem 2rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .closing-note p {
+            margin-bottom: 0.6rem;
+        }
+
+        .closing-note .cite-link {
+            background: #f2f6fb;
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 8px;
+            font-style: normal;
+        }
+
+        .faq-mini {
+            background: #ffffff;
+            border: 1px solid #dce1e8;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            padding: 1.6rem 2rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.6rem;
+            padding: 0.3rem 0;
+            border-bottom: 1px dashed #e1e8ef;
+        }
+
+        .faq-mini details:last-of-type {
+            border-bottom: none;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #1a2a41;
+            padding: 0.3rem 0;
+            font-size: 1rem;
+        }
+
+        .faq-mini details[open] summary {
+            color: #2b4c7e;
+        }
+
+        .faq-mini .answer {
+            padding: 0.5rem 0 0.4rem 1rem;
+            color: #334155;
+            font-size: 0.95rem;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 1.2rem;
+            font-size: 0.85rem;
+            color: #697586;
+            border-top: 1px solid #dce3eb;
+            padding-top: 1.4rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 540px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+            .hero-tag {
+                padding: 1.6rem 1.2rem;
+            }
+            .hero-tag h1 {
+                font-size: 1.7rem;
+            }
+            .card,
+            .closing-note,
+            .faq-mini {
+                padding: 1.4rem 1.2rem;
+            }
+            .feature-list li {
+                padding: 0.5rem 0.6rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero-tag h1 {
+                font-size: 1.4rem;
+            }
+        }
+
+        a {
+            color: #1f4a7a;
+            text-decoration: none;
+            border-bottom: 1px dotted #b0c6db;
+            transition: border 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #0b2b4f;
+            border-bottom: 1px solid #0b2b4f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 开场短句 hero -->
+        <div class="hero-tag">
+            <h1>再回来看看。</h1>
+            <div class="sub">或收藏，或偶尔想起——<br>这里始终有一页为你准备好的信息。</div>
+        </div>
+
+        <!-- 承接段落：从再次访问的角度 -->
+        <div class="card">
+            <h2>一次访问之后</h2>
+            <p>互联网上的信息更迭很快，好内容常常淹没在推送里。上周点开的页面，下周可能就忘了入口。如果你曾经打开过<strong><a href="https://sitemain-jingcai.com">竞彩网</a></strong>，大概记得它提供的是围绕竞彩的一系列基础内容——赛事数据、规则说明、玩法介绍。这些内容不会过时，但需要稳定的入口才能反复查阅。</p>
+            <p>我们试着整理了一份实用的参照页，把常见的问题和要点放在一起。无论是第一次接触，还是隔了一段时间再回来，你都可以从这里接着看，不必重新翻找。</p>
+        </div>
+
+        <!-- 特点列表：从收藏和持续关注角度 -->
+        <div class="card">
+            <h2>值得持续关注的特点</h2>
+            <ul class="feature-list">
+                <li><span class="ico">📋</span><strong>结构清晰的信息分组</strong> —— 竞彩的规则、术语、场次说明按模块排列，减少反复跳转的麻烦。</li>
+                <li><span class="ico">📌</span><strong>适合再次翻阅</strong> —— 页面内容偏重事实与说明，没有时效性很强的弹窗或倒计时，任何时候收藏都不易过时。</li>
+                <li><span class="ico">🔍</span><strong>基础 FAQ 汇集</strong> —— 常见疑问如“让球怎么算”“奖金计算方式”等，都有直接对应的段落，不用在站内反复搜索。</li>
+                <li><span class="ico">🖇️</span><strong>一致的访问入口</strong> —— 网址长期固定，方便添加到浏览器书签或笔记里。下次想查细节时，直接打开<a href="https://sitemain-jingcai.com">竞彩网</a>即可。</li>
+            </ul>
+        </div>
+
+        <!-- 场景提示 + 温和过渡 -->
+        <div class="closing-note">
+            <p>如果你之前已经把页面加入收藏夹，现在打开可能发现部分内容做了补充。如果没有，把这一页放在书签栏里，下次需要时可以少花一点寻找的时间。</p>
+            <p>页面本身不追求花哨，只希望每次你回来都能快速找到想了解的部分。所有信息都以官方资料和通用规则为基础，简单直接。</p>
+        </div>
+
+        <!-- FAQ 摘要变化（仅列出两三个典型） -->
+        <div class="faq-mini">
+            <h2 style="border-bottom: 2px solid #eef2f7; font-size: 1.1rem; font-weight: 500; padding-bottom: 0.4rem; margin-bottom: 0.8rem;">常见问题（节选）</h2>
+            <details>
+                <summary>竞彩的“让球”在页面哪里能看到？</summary>
+                <div class="answer">在「让球胜平负」章节中有表格说明，同时附带了让球数的含义和实际例子。你可以在 <a href="https://sitemain-jingcai.com">竞彩网</a> 的对应分区直接查看。</div>
+            </details>
+            <details>
+                <summary>奖金计算是自己算还是页面有工具？</summary>
+                <div class="answer">页面提供计算方法和公式说明，以及不同情况的示例。没有外部计算器，但规则讲得比较细，跟着步骤就能算清。</div>
+            </details>
+            <details>
+                <summary>如果隔了很久没来，内容会变吗？</summary>
+                <div class="answer">基础规则和说明部分一般保持稳定，如果有调整会在更新日志里注明。你可以放心收藏，不需要频繁核对。</div>
+            </details>
+        </div>
+
+        <!-- 温和结尾 + 再次嵌入链接 -->
+        <div class="footer-note">
+            <p style="margin-bottom: 0.2rem;">—— 无论是初次见面，还是再次打开 ——</p>
+            <p style="margin-bottom: 0;">我们都建议你把 <a href="https://sitemain-jingcai.com">竞彩网</a> 放在一个容易找到的位置。</p>
+        </div>
+    </div>
+</body>
+</html>
